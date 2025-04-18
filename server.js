@@ -14,6 +14,9 @@ const express = require('express')
 const app = express()
 app.use(express.json())
 
+const cors = require('cors')
+app.use(cors())
+
 //* Leads API
 // (1)  Create a New Lead
 const createNewLead = async (leadDetails) => {
